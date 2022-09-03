@@ -52,14 +52,14 @@ if [[ ! $domain =~ "." ]] || [[ -z $domain ]]; then # $domain is empty or doesn'
     exit 1
 elif [ -z $output ]; then #no output file specified, print to terminal
     if [[ $wildcard -eq 1 ]]; then
-        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep \*\. | sort -u # grep for domains with wildcard
+        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep -i $domain | grep \*\. | sort -u # grep for domains with wildcard
     else
-        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | sed 's/\*\.//g' | sort -u # grep for domains NO wildcard
+        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep -i $domain | sed 's/\*\.//g' | sort -u # grep for domains NO wildcard
     fi
 else
     if [[ $wildcard -eq 1 ]]; then
-        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep \*\. | sort -u > $output # grep for domains with wildcard + save output to file
+        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep -i $domain | grep \*\. | sort -u > $output # grep for domains with wildcard + save output to file
     else
-        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | sed 's/\*\.//g' | sort -u > $output # no wildcard set + save to output file
+        curl -s "https://crt.sh/?q="$domain"&output=json" | jq -r '.[].common_name,.[].name_value' | grep -i $domain | sed 's/\*\.//g' | sort -u > $output # no wildcard set + save to output file
     fi
 fi
