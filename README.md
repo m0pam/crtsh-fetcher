@@ -26,8 +26,8 @@ Flags:
 -w｜--wildcardsonly               # only print domains with wildcards  [OPTIONAL]  
 
 Examples:
-./crtsh-fetcher.sh --domain gugol.xyz --output out.txt
-./crtsh-fetcher.sh -d gugol.xyz -w
+./crtsh-fetcher.sh --domain bugcrowd.com --output out.txt
+./crtsh-fetcher.sh -d bugcrowd.com -w
 ```
 
 -------------------------------------------------------
