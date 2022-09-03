@@ -12,7 +12,7 @@ An HTTP query is sent via curl to crt.sh with the requested domain, JSON is spec
 ### Installation & Usage
 1. Clone and make the script executable
    ```sh
-   git clone https://github.com/m0pam/crtsh-fetcher && crtsh-fetcher && chmod +x crtsh-fetcher.sh
+   git clone https://github.com/m0pam/crtsh-fetcher && cd crtsh-fetcher && chmod +x crtsh-fetcher.sh
    ```
 2. Execute
    ```sh
