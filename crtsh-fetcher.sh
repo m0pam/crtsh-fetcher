@@ -26,8 +26,8 @@ if [ $# -eq 0 ] || [ $1 == "-h" ] || [ $1 == "--h" ] || [ $1 == "-help" ] || [ $
     printf "${RED}-o\uff5c--output${CLEAR} ${BLUE}<output.txt>${CLEAR}	  # stout to specified file            [OPTIONAL]  \n"
     printf "${RED}-w\uff5c--wildcardsonly${CLEAR}	          # only print domains with wildcards  [OPTIONAL]  \n"
     printf "\n${YELLOW}Examples:${CLEAR}\n" 
-    printf "$0 ${RED}--domain${CLEAR} ${BLUE}gugol.xyz${CLEAR} ${RED}--output${CLEAR} ${BLUE}out.txt${CLEAR}\n"
-    printf "$0 ${RED}-d${CLEAR} ${BLUE}gugol.xyz${CLEAR} ${RED}-w${CLEAR}\n"
+    printf "$0 ${RED}--domain${CLEAR} ${BLUE}bugcrowd.com${CLEAR} ${RED}--output${CLEAR} ${BLUE}out.txt${CLEAR}\n"
+    printf "$0 ${RED}-d${CLEAR} ${BLUE}bugcrowd.com${CLEAR} ${RED}-w${CLEAR}\n"
     exit 1
 fi
 
