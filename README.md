@@ -1,7 +1,8 @@
 # Crtsh-Fetcher
 Fetches domains from https://crt.sh/
 
-![Screenshot](images/menu.png)
+![menu](https://user-images.githubusercontent.com/90508460/190712193-a76b6c3f-d650-4648-9469-6c9b9fdc5546.png)
+
 
 #### How does it work?
 An HTTP query is sent via curl to crt.sh with the requested domain, JSON is specified for the response format, from there it is parsed with [jq](https://github.com/stedolan/jq) to extract two fields: *common_name* and *name_value*. Sorting is then carried out and duplicates removed.
