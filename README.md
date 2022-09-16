@@ -31,4 +31,4 @@ Examples:
 -------------------------------------------------------
 #### Why yet another crt.sh fetching script ?!
 There are 999 scripts to fetch domains from crt.sh, but from my recent research, they all seem broken or don't fetch *all* domains listed.
-Even amass or subfinder failed to fetch domains clearly visible after a basic crt.sh query.
+Even amass or subfinder fail to fetch domains clearly visible after a basic crt.sh query.
